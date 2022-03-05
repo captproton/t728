@@ -1,6 +1,6 @@
 GIT
-  remote: https://github.com/SpinaCMS/Spina.git
-  revision: d3f7d24cf4b03ccbdf20de8f8a855bf3ca40ebf9
+  remote: https://github.com/captproton/Spina.git
+  revision: c974159e11efd25f7fd295c70d35a0389d4bf7e3
   specs:
     spina (2.8.1)
       ancestry

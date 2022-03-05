@@ -1,0 +1,24 @@
+.gwbg-cover {
+    background-image:url('cover.jpg'); 
+    height: 60vh; 
+    max-height:460px;
+}
+nav {
+    @apply mt-0 w-full;
+}
+
+nav ul {
+    @apply flex justify-between flex-1 md:flex-none items-center;
+}
+
+.list-item {
+    /* @apply mr-2  */
+    background: teal;
+}
+
+
+.list-item a {
+    @apply inline-block text-blue-700 no-underline;
+    /* @apply underline py-2 px-2; */
+    /* color: orange; */
+}

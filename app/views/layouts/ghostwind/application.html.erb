@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta charset="UTF-8">
+    <title><%= current_account.name %> - Ghostwind CSS</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <%#  %>
+	  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
+    <style>
+      .smooth {transition: box-shadow 0.3s ease-in-out;}
+      ::selection{background-color: aliceblue}
+    </style>
+
+  </head>
+
+  <body>
+
+      <%= yield %>
+
+  </body>
+</html>
