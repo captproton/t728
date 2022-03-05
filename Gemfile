@@ -38,7 +38,7 @@ gem "redis", "~> 4.0"
 
 gem 'ffi', '~> 1.15', '>= 1.15.5'
 # accessing github for latest changes
-gem 'spina', git: 'https://github.com/SpinaCMS/Spina.git'
+gem 'spina', git: 'https://github.com/captproton/Spina.git'
 gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
