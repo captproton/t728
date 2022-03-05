@@ -1,0 +1,5 @@
+  .ghostwind__cover_image {
+    background-image:url('cover.jpg');
+    height: 60vh;
+    max-height:460px;
+  }
