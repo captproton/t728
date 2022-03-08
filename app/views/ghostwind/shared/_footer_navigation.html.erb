@@ -1,22 +1,4 @@
             <ul class="list-reset flex justify-center flex-1 md:flex-none items-center">
-                      <%# Main Navigation %>
-              <% nav = Spina::Navigation.find_by(name: 'main') %>
-              <% items = nav.navigation_items.regular_pages.sorted.live.in_menu.active %>
-
-              <% any_page_active = false %>
-              <% nav_items = [].tap do |out| %>
-                <% items.each do |item| %>
-                  <% if item.page.materialized_path %>
-                    <% active_page = item.page.id == current_page.id || ( current_page.resource.present? && item.page.name == current_page.resource.name ) %>
-                    <% out << [item.page.menu_title, item.page.materialized_path, active_page] %>
-                    <% any_page_active ||= active_page %>
-                  <% end %>
-              <% end %>
-              <% end.each do |item| %>
-                <li class="mr-2">
-                  <% classes = [].tap { |out| out << "inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-3"; out << "!text-white" if item[2] || !any_page_active }.join(' ') %>
-                  <%= link_to item[0], item[1], class: classes %>
-                </li>
-              <% end %>
+              <%= render  "/ghostwind/shared/navigation_minimal" %>
             </ul>
 <%#  %>
