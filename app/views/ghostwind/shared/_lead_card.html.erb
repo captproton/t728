@@ -12,7 +12,20 @@
                 <%# <p class="text-gray-800 font-serif text-base px-6 mb-5">
                     This starter template is an attempt to replicate the default Ghost theme "Casper" using Tailwind CSS and vanilla Javascript.
                 </p> %>
+                <% repeater(:portfolio) do |project| %>
+                
+                    <h1><%= project.content(:title) %></h1>
+                    <%# <%= project.content.image_tag(:image, resize_to_fill: [400, 300]) %> %>
+
+                <% end %>
+                
+             <% blog_pages = Spina::Resource.find_by(name: "blogposts").pages %>
+            <% blog_pages.each do |blog_page| %>
+
                 <%= content.html :text %>
+                
+            <% end %>
+                
             </div>
 
             <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">

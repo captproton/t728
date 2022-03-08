@@ -1,10 +1,10 @@
 module.exports = {
   content: [
-    '/Users/carltanner/.asdf/installs/ruby/3.1.0/lib/ruby/gems/3.1.0/gems/spina-2.8.1/app/views/**/*.*',
-'/Users/carltanner/.asdf/installs/ruby/3.1.0/lib/ruby/gems/3.1.0/gems/spina-2.8.1/app/components/**/*.*',
-'/Users/carltanner/.asdf/installs/ruby/3.1.0/lib/ruby/gems/3.1.0/gems/spina-2.8.1/app/helpers/**/*.*',
-'/Users/carltanner/.asdf/installs/ruby/3.1.0/lib/ruby/gems/3.1.0/gems/spina-2.8.1/app/assets/javascripts/**/*.js',
-'/Users/carltanner/.asdf/installs/ruby/3.1.0/lib/ruby/gems/3.1.0/gems/spina-2.8.1/app/**/application.tailwind.css'
+    '/Users/carltanner/.asdf/installs/ruby/3.1.0/lib/ruby/gems/3.1.0/bundler/gems/Spina-c974159e11ef/app/views/**/*.*',
+'/Users/carltanner/.asdf/installs/ruby/3.1.0/lib/ruby/gems/3.1.0/bundler/gems/Spina-c974159e11ef/app/components/**/*.*',
+'/Users/carltanner/.asdf/installs/ruby/3.1.0/lib/ruby/gems/3.1.0/bundler/gems/Spina-c974159e11ef/app/helpers/**/*.*',
+'/Users/carltanner/.asdf/installs/ruby/3.1.0/lib/ruby/gems/3.1.0/bundler/gems/Spina-c974159e11ef/app/assets/javascripts/**/*.js',
+'/Users/carltanner/.asdf/installs/ruby/3.1.0/lib/ruby/gems/3.1.0/bundler/gems/Spina-c974159e11ef/app/**/application.tailwind.css'
   ],  
   theme: {
     fontFamily: {
