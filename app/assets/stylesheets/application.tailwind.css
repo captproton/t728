@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  /* card title */
+  .ghostwind__card-textbox div:nth-child(1) {
+    @apply w-full text-gray-600 text-xs md:text-sm pt-6 px-6
+  }
+
+  /* card title */
+  .ghostwind__card-textbox div:nth-child(2) {
+    @apply w-full font-bold text-xl text-gray-900 px-6
+  }
+
+  /* card body */
+  .ghostwind__card-textbox div:nth-child(3) {
+    @apply text-gray-800 font-serif text-base px-6 mb-5;
+  }
+
+  .ghostwind__card-blog a img {
+    @apply h-64 w-full rounded-t pb-6
+  }
+
+  .ghostwind__card-blog div:nth-child(2) {
+    @apply text-gray-800 font-serif text-base px-6 mb-5
+  }
+
+
+  
+}
+/* w-full text-gray-600 text-xs md:text-sm pt-6 px-6 */
