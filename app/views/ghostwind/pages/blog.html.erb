@@ -1,3 +1,6 @@
+<% 
+    page_klass = "blog" 
+%>
 <section "bg-gray-200 font-sans leading-normal tracking-normal">
     <%= render '/ghostwind/shared/header' %>
         
@@ -5,7 +8,7 @@
     <div class="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
         
         <div class="mx-0 sm:mx-6">
-            
+            <p><%= page_klass %> </p>
             <!--Nav-->
             <%= render '/ghostwind/shared/navigation' %>
             
@@ -18,7 +21,7 @@
                 <!--Posts Container-->
                 <div class="flex flex-wrap justify-between pt-12 -mx-6">
                     <% @posts.each_with_index do |blogpost, index| %>
-                        <%= render partial: "/ghostwind/shared/card", locals: { card: blogpost, card_number: index } %>
+                        <%= render partial: "/ghostwind/shared/card", locals: { card: blogpost, card_number: index, page_klass: page_klass } %>
                     <% end %>
 
                     <%#= render  "/ghostwind/shared/half_col_card" %>
