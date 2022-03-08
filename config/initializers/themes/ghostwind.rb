@@ -6,7 +6,7 @@
 Spina::Theme.register do |theme|
   # All views are namespaced based on the theme's name
   theme.name = 'ghostwind'
-  theme.title = 'Ghostwind theme'
+  theme.title = '👻 Ghostwind theme'
   
   # Parts 
   # Define all editable parts you want to use in your view templates
@@ -21,7 +21,14 @@ Spina::Theme.register do |theme|
   # - Option
   # - Repeater
   theme.parts = [
-    {name: 'text',  title: "Body", hint: "Your main content", part_type: "Spina::Parts::Text"}
+    {name: 'text',  title: "Body", hint: "Your main content", part_type: "Spina::Parts::Text"},
+    {name: 'image',  title: "Image", hint: "Your main image", part_type: "Spina::Parts::Image"},
+    {
+      name: "blogposts",
+      title: "Blog Posts",
+      parts: %w(text image),
+      part_type: "Spina::Parts::Repeater"
+    }    
   ]
   
   # View templates
@@ -30,6 +37,8 @@ Spina::Theme.register do |theme|
   # by referencing them from the theme.parts configuration above.
   theme.view_templates = [
     {name: 'homepage', title: 'Homepage', parts: %w(text)}, 
+    {name: 'blog', title: 'Blog', description:  'A simple index for the blog page', parts: %w(text image)}, 
+    {name: 'blogpost', title: 'Blogpost', description:  'An article of a blog', parts: %w(text image)}, 
     {name: 'show', title: 'Page', parts: %w(text)}
   ]
   
@@ -38,15 +47,14 @@ Spina::Theme.register do |theme|
   # By naming them you can reference them in your code.
   theme.custom_pages = [
     {name: 'homepage', title: "Homepage", deletable: false, view_template: "homepage"},
+    {name: 'blog', title: "Blog", deletable: false, view_template: "blog"},
   ]
   
   # Navigations (optional)
   # If your project has multiple navigations, it can be useful to configure multiple
   # navigations.
   theme.navigations = [
-    {name: 'main',
-      label: 'Main navigation',
-      auto_add_pages: true}
+    {name: 'main', label: 'Main navigation'}
   ]
   
   # Layout parts (optional)
@@ -57,7 +65,7 @@ Spina::Theme.register do |theme|
   # Resources (optional)
   # Think of resources as a collection of pages. They are managed separately in Spina
   # allowing you to separate these pages from the 'main' collection of pages.
-  theme.resources = []
+  theme.resources = [  {name: 'blogposts', label: "Blogposts", view_template: "blogpost", slug: "blogpost"}]
   
   # Plugins (optional)
   theme.plugins = []

@@ -16,26 +16,13 @@
                 <% any_page_active ||= active_page %>
               <% end %>
             <% end %>
-          <% end.each do |item| %>
-            <li class="mr-2">
-              <% classes = [].tap { |out| out << "block text-gray-400 text-base hover:text-white uppercase"; out << "!text-white" if item[2] || !any_page_active }.join(' ') %>
-              <%= link_to item[0], item[1], class: classes %>
-            </li>
-          <% end %>
-
-                <%# <li class="mr-2">
-                <a class="inline-block py-2 px-2 text-white no-underline hover:underline" href="post.html">POST</a>
-                </li>
-                <li class="mr-2">
-                <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-2" href="#">LINK</a>
-                </li>
-                <li class="mr-2">
-                <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-2" href="#">LINK</a>
-                </li>
-                <li class="mr-2">
-                <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-2" href="post_vue.html">POST_VUE</a>
-                </li> %>
-            </ul>
+            <% end.each do |item| %>
+              <li class="mr-2">
+                <% classes = [].tap { |out| out << "block text-gray-400 text-base hover:text-white uppercase"; out << "!text-white" if item[2] || !any_page_active }.join(' ') %>
+                <%= link_to item[0].upcase, item[1], class: classes %>
+              </li>
+            <% end %>
+          </ul>
         </div>
 
 

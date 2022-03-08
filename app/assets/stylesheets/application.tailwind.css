@@ -19,6 +19,14 @@
     @apply text-gray-800 font-serif text-base px-6 mb-5;
   }
 
+  .ghostwind__card-blog a img {
+    @apply h-64 w-full rounded-t pb-6
+  }
+
+  .ghostwind__card-blog div:nth-child(2) {
+    @apply text-gray-800 font-serif text-base px-6 mb-5
+  }
+
 
   
 }
