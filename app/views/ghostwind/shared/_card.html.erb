@@ -1,7 +1,5 @@
 <%# set card_width %>
 <% 
-    card_width = "md:w-1/3"
-
     case card_number
     when 0..2
         card_width = "md:w-1/3"
@@ -13,8 +11,19 @@
         card_width = "md:w-1/3"
     end
 
-    
 %>
+
+<%# set card classes %>
+<%
+    case page_klass
+    when "blogpost"
+        card_klasses = "px-2 pb-12"
+    else
+        card_klasses = "p-6 flex flex-col flex-grow flex-shrink ghostwind__card-blog"
+    end
+
+%>
+
 <%# set reading time (https://gist.github.com/Integralist/5812675) %>
 <% 
     words_per_minute = 180
@@ -26,7 +35,7 @@
  %>
 
 <!--1/3 col -->
-<div class="w-full <%= card_width %> p-6 flex flex-col flex-grow flex-shrink ghostwind__card-blog">
+<div class="w-full <%= card_width %> <%= card_klasses %>">
     <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
         <%= link_to(card.materialized_path, class: "flex flex-wrap no-underline hover:no-underline") do %>
             <%= card.content.image_tag :image %>

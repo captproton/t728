@@ -20,13 +20,23 @@
   }
 
   .ghostwind__card-blog a img {
-    @apply h-64 w-full rounded-t pb-6
+    @apply h-64 w-full rounded-t pb-6;
   }
 
   .ghostwind__card-blog div:nth-child(2) {
-    @apply text-gray-800 font-serif text-base px-6 mb-5
+    @apply text-gray-800 font-serif text-base px-6 mb-5;
+  }
+  .ghostwind__container pre {
+    @apply bg-gray-900 rounded text-white font-mono text-base p-4;
   }
 
+  .ghostwind__container code {
+    @apply break-words whitespace-pre-wrap;
+  }
+
+  .ghostwind__container blockquote {
+    @apply border-l-4 border-green-500 italic my-8 pl-8 md:pl-12;
+  }
 
   
 }
